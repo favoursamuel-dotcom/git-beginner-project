@@ -1,4 +1,3 @@
-/* 1. Shared styles. border-box includes padding in an element's width. */
 * {
   box-sizing: border-box;
 }
@@ -18,13 +17,12 @@ a:hover {
   color: #3e54a3;
 }
 
-a:focus-visible, summary:focus-visible {
+a:focus-visible,
+summary:focus-visible {
   outline: 3px solid #3e54a3;
   outline-offset: 5px;
 }
 
-
-/* 2. Top navigation. Flexbox places items beside each other. */
 .header {
   min-height: 86px;
   padding: 20px 24px;
@@ -110,8 +108,6 @@ a:focus-visible, summary:focus-visible {
   letter-spacing: 1px;
 }
 
-
-/* 3. The main content has a maximum width and is centered. */
 .container {
   max-width: 1200px;
   width: calc(100% - 80px);
@@ -323,8 +319,6 @@ h1 {
   color: white;
 }
 
-
-/* 4. Information cards. The right column stacks its cards vertically. */
 .information {
   display: flex;
   align-items: stretch;
@@ -332,7 +326,8 @@ h1 {
   margin-top: 20px;
 }
 
-.brief, .right-column {
+.brief,
+.right-column {
   width: 50%;
 }
 
@@ -348,7 +343,8 @@ h2 {
   margin: 0 0 17px;
 }
 
-.information p, .information li {
+.information p,
+.information li {
   font-size: 18px;
   line-height: 1.5;
 }
@@ -357,7 +353,8 @@ h2 {
   margin: 0 0 16px;
 }
 
-.information ul, .information ol {
+.information ul,
+.information ol {
   margin: 0 0 16px;
   padding-left: 36px;
 }
@@ -389,7 +386,7 @@ code {
 }
 
 .asset-list li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #17d6a1;
@@ -397,7 +394,7 @@ code {
 }
 
 .asset-list .unavailable::before {
-  content: '×';
+  content: "×";
   color: #ed1645;
 }
 
@@ -405,8 +402,6 @@ code {
   margin-bottom: 0;
 }
 
-
-/* 5. HTML supplies the open/close behavior; CSS draws the plus sign. */
 .faq {
   max-width: 650px;
   margin: 98px auto 30px;
@@ -441,7 +436,7 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-  content: '+';
+  content: "+";
   position: absolute;
   right: 30px;
   top: 17px;
@@ -449,122 +444,125 @@ summary::after {
   font-weight: normal;
 }
 
-
 details p {
   padding: 0 30px 20px;
   line-height: 1.6;
   margin: 0;
 }
 
-
-/* 6. Media queries change the layout on smaller screens. */
 @media (max-width: 1000px) {
-.header {
-  flex-direction: column;
-}
+  .header {
+    flex-direction: column;
+  }
 
-.header nav {
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  .header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.container {
-  width: calc(100% - 40px);
-}
+  .container {
+    width: calc(100% - 40px);
+  }
 
-.challenge-card {
-  gap: 25px;
-}
+  .challenge-card {
+    gap: 25px;
+  }
 
-.badges {
-  flex-wrap: wrap;
-  gap: 15px;
-}
+  .badges {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 
-.start-button {
-  padding: 15px 30px;
-}
+  .start-button {
+    padding: 15px 30px;
+  }
 
-.participants {
-  gap: 12px;
-}
-
+  .participants {
+    gap: 12px;
+  }
 }
 @media (max-width: 700px) {
-.header nav {
-  gap: 20px;
-}
+  .header nav {
+    gap: 20px;
+  }
 
-.header nav a {
-  font-size: 12px;
-}
+  .header nav a {
+    font-size: 12px;
+  }
 
-.header nav .login {
-  padding: 12px 20px;
-}
+  .header nav .login {
+    padding: 12px 20px;
+  }
 
-.steps {
-  margin-top: 30px;
-  margin-bottom: 35px;
-  gap: 10px;
-}
+  .steps {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    gap: 10px;
+  }
 
-.step span {
-  font-size: 11px;
-}
+  .step span {
+    font-size: 11px;
+  }
 
-.step p {
-  font-size: 14px;
-  line-height: 1.4;
-}
+  .step p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 
-.card {
-  padding: 22px;
-}
+  .card {
+    padding: 22px;
+  }
 
-.challenge-card, .information {
-  flex-direction: column;
-}
+  .challenge-card,
+  .information {
+    flex-direction: column;
+  }
 
-.challenge-text, .design, .brief, .right-column {
-  width: 100%;
-}
+  .challenge-text,
+  .design,
+  .brief,
+  .right-column {
+    width: 100%;
+  }
 
-.design {
-  margin-top: 12px;
-}
+  .design {
+    margin-top: 12px;
+  }
 
-h1, h2 {
-  font-size: 25px;
-}
+  h1,
+  h2 {
+    font-size: 25px;
+  }
 
-.information p, .information li, .description, .participants {
-  font-size: 16px;
-}
+  .information p,
+  .information li,
+  .description,
+  .participants {
+    font-size: 16px;
+  }
 
-.information {
-  gap: 20px;
-}
+  .information {
+    gap: 20px;
+  }
 
-.right-column {
-  gap: 20px;
-}
+  .right-column {
+    gap: 20px;
+  }
 
-.design-labels span {
-  font-size: 11px;
-  padding: 6px 10px;
-}
+  .design-labels span {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
 
-.faq {
-  margin-top: 55px;
-}
+  .faq {
+    margin-top: 55px;
+  }
 
-summary {
-  padding-left: 20px;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
+  summary {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 .discord-banner {
   position: relative;
@@ -704,7 +702,8 @@ summary {
   font-size: 18px;
   margin-bottom: 13px;
 }
-.footer-column a:hover, .legal-links a:hover {
+.footer-column a:hover,
+.legal-links a:hover {
   text-decoration: underline;
 }
 .footer-bottom {
@@ -723,12 +722,12 @@ summary {
 .legal-links a {
   text-decoration: none;
 }
-button:focus-visible, input:focus-visible {
+button:focus-visible,
+input:focus-visible {
   outline: 3px solid #08b2cf;
   outline-offset: 4px;
 }
 
-/* Stack the footer sections when there is less space. */
 @media (max-width: 1000px) {
   .footer-main {
     flex-wrap: wrap;
